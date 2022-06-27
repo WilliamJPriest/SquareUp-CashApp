@@ -4,7 +4,7 @@ const {registerValidation,loginValidation}=require('../Validations/validations.j
 const bcrypt= require('bcrypt');
 
 
-router.post('register', async (req,res)=>{
+router.post('/register', async (req,res)=>{
     res.status(200).send("hello")
     // const {error}= registerValidation(req.body)
     // if(error) return res.status(400).send(error.details[0].message)
@@ -31,4 +31,4 @@ router.post('register', async (req,res)=>{
     //     res.status(400).send(err);
     // }
 })
-module.exports=router;
+module.exports=router; 

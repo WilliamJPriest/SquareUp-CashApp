@@ -9,8 +9,7 @@ const authRoutes =require("./Routes/auth")
 
 dotEnv.config()
 
-mongoose.connect(
-    process.env.DB_CONNECT,)
+mongoose.connect("mongodb+srv://HackathonTeam:HackathonTeam@cluster0.c7mwp.mongodb.net/?retryWrites=true&w=majority")
     .then(()=> console.log("Connected"))
     .catch((err)=> console.log(err))
 
