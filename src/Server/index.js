@@ -4,7 +4,7 @@ const dotEnv= require("dotenv")
 const mongoose= require("mongoose")
 const cors = require("cors")
 
-const authRoutes =require("./Routes/auth.js")
+const authRoutes =require("./Routes/auth")
 
 
 dotEnv.config()
@@ -17,7 +17,7 @@ mongoose.connect(
 app.use(express.json())
 app.use(cors())
 
-app.use("api/users", authRoutes)
-app.listen(3000,()=> console.log("connected to localhost"))
+app.use("api/users/", authRoutes)
+app.listen(3001,()=> console.log("connected to localhost"))
 
 //Connecting to the Backend
