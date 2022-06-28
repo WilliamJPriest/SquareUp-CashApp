@@ -19,5 +19,15 @@ const loginValidation= (data) =>{
     return joiSchema.validate(data);
 }
 
+const receiptValidations= (data)=>{
+    const joiSchema= Joi.object({
+        username: Joi.string().min(6).required(),
+        currency: Joi.string().required(),
+        products: Joi.string().min(6).required()
+
+    });
+    return joiSchema.validate(data)
+}
 module.exports.registerValidation=registerValidation;
 module.exports.loginValidation=loginValidation;
+module.exports.receiptValidations=receiptValidations;
