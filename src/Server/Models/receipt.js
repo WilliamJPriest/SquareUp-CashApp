@@ -2,8 +2,8 @@ const mongoose =require('mongoose')
 
 const receiptSchema=new mongoose.Schema({
     username:{ 
-       
-        max:255        
+        type: String,
+        max:255,        
     },
     currency:{
         type:String,
