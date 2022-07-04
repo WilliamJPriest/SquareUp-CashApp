@@ -5,7 +5,7 @@ const mongoose= require("mongoose")
 const cors = require("cors")
 
 const authRoutes =require("./Routes/auth")
-const paymentsRoutes = require("./Routes/squareUpPayments.ja")
+const paymentRoutes = require("./Routes/squareUpPayments")
 
 
 dotEnv.config()
@@ -19,6 +19,8 @@ app.use(express.json())
 app.use(cors())
 
 app.use("api/users/", authRoutes)
+app.use("api/", paymentRoutes)
+
 app.listen(3001,()=> console.log("connected to localhost"))
 
 //Connecting to the Backend
