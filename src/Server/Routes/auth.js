@@ -5,7 +5,7 @@ const bcrypt= require('bcrypt');
 const jwt = require('jsonwebtoken')
 
 
-router.post('register', async (req,res)=>{
+router.post('/register', async (req,res)=>{
     const {error}= registerValidation(req.body)
     if(error) return res.status(400).send(error.details[0].message)
 
@@ -32,7 +32,7 @@ router.post('register', async (req,res)=>{
     }
 })
 
-router.post('login', async (req,res)=>{
+router.post('/login', async (req,res)=>{
         const {error}=loginValidation(req.body)
         if(error) return(res.status(400).send(error.details[0].message))
       
@@ -42,8 +42,7 @@ router.post('login', async (req,res)=>{
         const passwordValidation= await bcrypt.compare(req.body.password,userDetails.password)
         if(!passwordValidation) return(res.status(400).send("password is incorrect"))
         
-        
-      
+              
         const userToken= jwt.sign({_id: userDetails._id, },process.env.HIDDEN__TOKEN);
         res.json({auth: true, token: userToken,});
       

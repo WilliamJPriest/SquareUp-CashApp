@@ -18,8 +18,8 @@ mongoose.connect(
 app.use(express.json())
 app.use(cors())
 
-app.use("api/users/", authRoutes)
-app.use("api/", paymentRoutes)
+app.use("/api/users", authRoutes)
+app.use("/api", paymentRoutes)
 
 app.listen(3001,()=> console.log("connected to localhost"))
 
