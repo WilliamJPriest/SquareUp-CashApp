@@ -5,7 +5,7 @@ const mongoose= require("mongoose")
 const cors = require("cors")
 
 const authRoutes =require("./Routes/auth")
-const paymentRoutes = require("./Routes/squareUpPayments")
+const paymentRoutes = require("./Routes/receiptRecords")
 
 
 dotEnv.config()
