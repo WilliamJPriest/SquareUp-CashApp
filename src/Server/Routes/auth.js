@@ -2,7 +2,8 @@ const router= require('express').Router();
 const user= require('../Models/user.js');
 const {registerValidation,loginValidation}=require('../Validations/validations.js');
 const bcrypt= require('bcrypt');
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
+const authMiddleWare = require('../Validations/verifyToken')
 
 
 router.post('/register', async (req,res)=>{
@@ -25,7 +26,7 @@ router.post('/register', async (req,res)=>{
     })
 
     try{
-        const savedUser =newUser.save()
+        const savedUser = await newUser.save()
         res.json(savedUser)
     }catch(err){
         res.status(400).send(err);
@@ -36,7 +37,7 @@ router.post('/login', async (req,res)=>{
         const {error}=loginValidation(req.body)
         if(error) return(res.status(400).send(error.details[0].message))
       
-        const userDetails= await User.findOne({email: req.body.email}) 
+        const userDetails= await user.findOne({email: req.body.email}) 
         if(!userDetails) return(res.status(400).send("email doesn't exist"))
       
         const passwordValidation= await bcrypt.compare(req.body.password,userDetails.password)
@@ -48,5 +49,19 @@ router.post('/login', async (req,res)=>{
       
       
       })
+
+router.get('/',  async (req,res)=>{
+try{ 
+    const token = req.header('x-auth-token');
+
+    const user = await user.findById(jwy.decode(token))
+    return res.status(200).json({
+        success: true,
+        data: user,
+    })
+    }catch(err){
+    res.send(500).send(err)
+}
+})
       
 module.exports=router;

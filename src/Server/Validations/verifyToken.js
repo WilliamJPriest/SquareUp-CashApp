@@ -7,7 +7,7 @@ module.exports =function (req,res,next){
         const verifiedToken= (token, process.env.Api__Key)
         req.user =verifiedToken
         next()
-    } catch{
+    }catch{
         res.status(400).send("token error")
     }
 }

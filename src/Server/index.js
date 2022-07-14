@@ -25,10 +25,6 @@ const client = new Client({
     environment: Environment.Sandbox,
     });
       
-const { locationsApi } = client;
-
-console.log(locationsApi)
-      
 app.use(express.json())
 app.use(cors())
 

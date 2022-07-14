@@ -1,14 +1,20 @@
 import './App.css';
+import Payments from './Pages/Payments' 
 
 function App() {
-  
-  return (
+  // fetch(" https://connect.squareupsandbox.com/v2/payments",{
+  //   method: 'POST',
+  //   headers: { 'Content-Type': 'application/json' ,
+  //   'Cors':  "Access-Control-Allow-Origin "},  
+  //   body: JSON.stringify({       
+  //     sourceId: sourceId
+  // }).then( console.log(json(body)))
+ 
+// })
+  return(
     <>
-    <section className="Test__Payments">
-      <button className="Payment__BTN">
-        Pay me
-      </button>
-    </section>
+
+      <Payments/>
     </>
   );
 }
