@@ -1,20 +1,22 @@
 const router= require('express').Router();
 const { randomUUID } = require("crypto");
+BigInt.prototype,toJSON = function(){return this.toString();}
 
-router.post("/v2/payments",  async (req,res)=>{
+
+router.post("v2/payments",  async (req,res)=>{
   try {
-    const response = await client.paymentsApi.createPayment({
-      sourceId: req.body.sourceId,
+    const {result} = await paymentsApi.createPayment({
       idempotencyKey: randomUUID(),
+      sourceId: req.body.sourceId,
       amountMoney: {
         amount: 100,
         currency: 'USD'
       }
     });
-  
-    console.log(response.result);
-  } catch(error) {
-    console.log(error);
+      console.log(result)
+      res.status(200).json(result);
+  }catch(error) {
+      res.status(500).send("error");
   }
   
 

@@ -1,4 +1,4 @@
-const {Client, Environment,ApiError}= require("square")
+const {Client, Environment}= require("square")
 
 const express= require("express")
 const app = express()
@@ -30,7 +30,7 @@ app.use(cors())
 
 app.use("/api/users", authRoutes)
 app.use("/api", receiptRoutes)
-app.use("connect.squareupsandbox.com/",paymentRoutes)
+app.use("https://connect.squareupsandbox.com",paymentRoutes)
 
 app.listen(3001,()=> console.log("connected to localhost"))
 
