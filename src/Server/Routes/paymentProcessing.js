@@ -28,4 +28,15 @@ router.post("/v2/payments",  async (req,res)=>{
 
 })
 
+router.get('/v2/payments', async (req,res)=>{
+
+try {
+  const {result}= await client.paymentsApi.listPayments();
+
+  res.status(200).json(result);;
+} catch(error) {
+  console.log(error);
+}
+})
+
 module.exports= router
