@@ -12,6 +12,12 @@ const productSchema= new mongoose.Schema({
         required:true,
 
     },
+    productCurrency:{
+        type: String,
+        max:255,        
+        required:true,
+
+    },
     productImage:{
         type: String,
         max:255,        
