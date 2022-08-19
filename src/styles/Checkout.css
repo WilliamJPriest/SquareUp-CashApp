@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap');
+
+
+.container{
+    background-color: rgb(242, 241, 236);
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 14vh;
+    left: 70vw;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 1%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+    z-index: 2;
+}
+.card{
+width: 26vw;
+position: relative;
+height: 79vh;
+margin-bottom: 3vh;
+background: #fff;
+border-radius: 10px;
+border: 3px solid rgb(90, 90, 90);
+/* margin: 1vw; */
+margin-top: 0;
+margin-bottom: 1vh;
+color: #000;
+transition:  all ease-in-out .6s ;
+}
+.card:hover{
+    box-shadow: 0 1px 2px rgba(22, 118, 82, 0.88), 0 4px 12px rgba(2, 141, 62, 0.55);
+    transform: scale(1.008);
+}
+.overlay{
+    position: relative;
+width: 98%;
+height: 44%;
+    border-radius: 25px 25px 0 0;
+    /* background: #000; */
+}
+.card-header{
+    height: 10%;
+    width: 100%;
+    position: relative;
+}
+.card-text{
+    font-size: 0.8rem;
+    position: relative;
+    margin-top: 7%;
+    text-align: center;
+}
+
+.card-title{
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin-top: 10px;
+    margin-bottom: 2px;
+    position: relative;
+    color: #000;
+    text-align: center;
+    padding-bottom: 21px;
+    font-family: 'Raleway', sans-serif;
+}
+button{
+    transition: all .25s ease-in-out;
+}
+button:hover{
+    margin-left: 1%;
+    transform: scale(1.1);
+}
+.card-body{
+    padding: 9px;
+}
+.ordered{
+    padding-top: 2%;
+    margin-left: 2%;
+    background: #edefe7;
+    height: 37vh;
+    top: 10%;
+    position: relative;
+    padding-bottom: 5%;
+    border-radius: 10px;
+}
+#head3{
+    position: relative;
+    top: 3vh;
+    padding-left: 2%;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.surround{
+    overflow-x: hidden;
+    width: 100%;
+    height: 65%;
+}
+.orders{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    padding-right: 17px;
+    /* background-color: #fff;  */
+}
+.orders ul{
+    padding-left: 2%;
+}
+.pButton{
+    position: relative;
+    top: 0;
+    left: 25%;
+    width: 48%;
+    text-align: center;
+    height: 7vh;
+    font-size: 100%;
+    font-weight: 700;
+    background: rgb(5, 70, 42);
+    border: 0;
+    color: #fff;
+    padding: 6px;
+}
+.pButton a {
+text-decoration: none;
+color: #fff;
+}
+.pButton:hover{
+   background: rgb(7, 170, 83) ;
+}
+.fa-cart-shopping.svg-inline--fa{
+    font-size: 0.8rem;
+}
+h3 .apart{
+    position: relative;
+    left: 65%;
+    font-weight: 400;
+}
+#addr-label,span{
+    display: inline-block;
+}
+ #address{
+    margin-left: 4%;
+    width: 65%;
+    font-size: 0.9rem;
+    font-weight: 200;
+    color: #504f4e;
+    overflow: hidden;
+}
+table{
+    width: 90%;
+    left: 1.5%;
+    position: relative;
+    overflow-y: scroll;
+}
+th{
+    text-align: left;
+}
+.item{
+    width:80%
+}
+table .svg-inline--fa {
+    margin-left: 4%;
+    font-size: 0.9rem;
+}
+#billings{
+    position: relative;
+    border-radius: 10px;
+    top: 20%;
+    /* height: -moz-fit-content; */
+    height: 65%;
+    left: 2%;
+    width: 98%;
+    padding-bottom: 2%;
+    background: #edefe7;
+}
+.sumed{
+    position: relative;
+    /* top: 10vh; */
+    width: 100%;
+    /* height: 20vh; */
+    padding-left: 5%;
+    padding-bottom: 2%;
+}
+.payment-div{
+    height: 27%;
+    top:30%;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+}
+.payment-div h3{
+    padding-left: 5%;
+}
+.payment-div ul{
+    width: 80%;
+}
+.payment-div li{
+    display: inline-block;
+    margin-left: 3%;
+}
+.payment-div button{
+    height: 50px;
+    border-radius: 50%;
+    padding: 4px;
+    width: 50px;
+    border: 2px solid seashell;
+    color: #fff;
+    background: #010101;
+}
+#mid{
+    background: #39e639;
+}
+.svg-inline--fa {
+    font-size: 1.8rem;
+}
+.instruction{
+    position: relative;
+    top: 10%;
+    padding: 3px 20px 0;
+    left: 1%;
+    margin-top: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #504f4e;
+}
+.instruction p{
+    margin-top: 0;
+
+}
+
+@media  screen and (max-width: 450px){
+    .movie-section{
+        left:0;
+        width: 100vw;
+      }
+      .card {
+        width: 90vw;
+        height: fit-content;
+        margin-left: 0;
+      }
+      .card-text{
+        margin-top: 5%;
+          padding: 4px;
+      }
+}

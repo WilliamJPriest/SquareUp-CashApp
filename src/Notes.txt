@@ -4,4 +4,7 @@ GithubPages
 Nodemon
 Express.js
 Mongoose
-
+Dotenv
+bcrypt
+JWT
+SquareUp SDK

@@ -1,0 +1,133 @@
+/* @import url('../Moon Bold.otf');
+@import url('../Moon Light.otf'); */
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway+Dots&family=Roboto:wght@300;400;500;700;900&family=Rock+Salt&family=Rubik+Puddles&display=swap');
+/* font-family: 'Irish Grover', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway Dots', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Rock Salt', cursive;
+font-family: 'Rubik Puddles', cursive; */
+@keyframes slide-fade {
+    0%{
+        background: rgb(247, 173, 61);
+        transform: translateY(-50px);
+    }
+    50%{
+        background: rgb(207, 63, 16);
+        transform: translateY(-25px);
+    }
+    100%{
+        background: #fff;
+        /* background: linear-gradient(25deg, rgba(80, 20, 15, 0.813) 5%, rgb(105, 13, 13)48%, rgb(84, 5, 5) 100%); */
+        transform: translateY(-5px);
+    }
+}
+
+/* flip anim */
+/* transform: translate3d(-1120px, 0px, 0px) rotateX(0deg) rotateY(-180deg); */
+/* cube transform */
+/* transform: matrix(1, 0, 0, 1, 0, 0); */
+.main{
+    /* background: linear-gradient(25deg, rgba(200, 249, 122, 0.76) 0%, rgb(47 194 82)48%, rgb(189, 244, 95) 100%); */
+    background: #bf0a2b;
+    /* background: linear-gradient(25deg, rgba(80, 20, 15, 0.813) 5%, rgb(105, 13, 13)48%, rgb(84, 5, 5) 100%); */
+
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    overflow-x: hidden;
+}
+.gateway{
+    width: 100vw;
+    height: fit-content;
+    /* position: relative; */
+    /* top:13vh; */
+    /* background-color: rgba(245, 204, 151, 0.509); */
+}
+.navigations{
+    width:100vw;
+    height: 12vh;
+    position: relative;
+    top: -2.2vh;
+    background: #fff;
+    z-index: 3;
+}
+#logo{
+    position: absolute;
+    width: 190px;
+    height: 80px;
+    left: 1vw;
+    top: 1vh;
+}
+#logo-text{
+    position: relative;
+    left: 2vw;
+    /* font-family: 'Raleway Dots', cursive; */
+    font-family: 'Poppins';
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    top:7vh;
+    display: none;
+    color: rgb(183, 10, 7);
+}
+.navigations nav {
+    width:100vw;
+    position: relative;
+}
+.navigations nav ul{
+    width : 70vw;
+    margin-left: 20vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-between;
+}
+.navigations nav ul li{
+    width:100%;
+    list-style: none;
+    margin-top: 3%;
+
+}
+.navigations nav ul li button{
+    border:0;
+    color: #000;
+    height: 55px;
+    /* border-radius:  0  0 100px 100px; */
+    width: 60%;
+    padding: 2px;
+    border: 1px solid rgb(133, 2, 2);
+    border-top: 0;
+    background: rgb(4, 3, 3);
+
+    /* background: linear-gradient(50deg, rgba(72, 164, 36, 0.76) 0%, rgb(47 194 82)48%, rgb(32, 132, 23) 100%); */
+    animation: slide-fade 600ms ease-in;
+}
+.navigations nav ul li button:hover{
+    background: #bf0a2b;
+    /* background: linear-gradient(25deg, rgba(80, 20, 15, 0.813) 5%, rgb(105, 13, 13)48%, rgb(84, 5, 5) 100%); */
+}
+
+.navigations nav ul li a{
+    text-decoration: none;
+    display: block;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    /* margin-top: -3%; */
+    font-size: 80%;
+}
+.navigations nav ul li a:hover{
+    color: #fff;
+}
+.fa-bowl-food.svg-inline--fa,.fa-house.svg-inline--fa,.fa-drumstick-bite.svg-inline--fa {
+    display: inline-block;
+    position: relative;
+    /* left: 42%; */
+    padding-top: 8%;
+    font-size: 1.4rem;
+    text-align: left;
+}
+

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap');
+
+@keyframes tilt {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(10deg);
+    }
+  }
+.card-contain{
+width :98vw;
+position:absolute;
+height: fit-content;
+top:0vh;
+display: flex;
+margin-top: -2px;
+align-content: space-between;
+align-items: center;
+text-align: center;
+flex-wrap: wrap;
+padding: 10px;
+padding-top: 8vh;
+background-color: #060202;
+color: #fff;
+z-index: 12;
+font-family: 'Roboto', sans-serif;
+
+}
+.card{
+width: 29vw;
+height: 74vh;
+margin-left: 2vw;
+margin-bottom: 3vh;
+border-radius: 30px;
+background: linear-gradient(50deg, rgb(206, 72, 23) 0%, rgba(193, 50, 3, 0.74) 48%, rgb(148, 23, 1) 100%);
+padding-left: .4vw;
+padding-top: .6vw;
+padding-bottom: 1vw;
+transition:  all ease-in-out .6s ;
+}
+.card:hover{
+    box-shadow: 0 1px 2px rgba(199, 11, 11, 0.88), 0 4px 12px rgba(219, 128, 128, 0.55);
+    background: linear-gradient(50deg, rgb(9, 174, 186) 0%, rgba(55, 160, 217, 0.74) 48%, rgb(2, 79, 173) 100%);
+    transform: rotate(1deg);
+}
+.overlay{
+    position: relative;
+width: 98%;
+height: 44%;
+    border-radius: 25px 25px 0 0;
+    /* background: #000; */
+}
+.card-header{
+    height: 50%;
+    top: 4%;
+    position: relative;
+}
+.card-text{
+    font-size: 0.8rem;
+    position: relative;
+    margin-top: 10%;
+    text-align: center;
+}
+.card-title-group{
+    display: block;
+}
+.card-title{
+    display: block;
+    font-size: 1.4rem;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+.card-body{
+    padding: 9px;
+}
+.card-image{
+    position: relative;
+    /* left:20%; */
+    width: 55%;
+    height: 30%;
+    border-radius: 5px;
+    border: 3px solid black ;
+}
+.pButton{
+border-radius: 10px;
+background: rgb(160, 4, 4);
+border: 1px solid rgb(231, 81, 6);
+color: #fff;
+float: left;
+margin-left: 5%;
+padding: 6px;
+font-weight: 600;
+}
+.card-like-bar{
+    display: inline-block;
+    float: right;
+    margin-right: 10%;
+}
+.like-text{
+    display: inline-block;
+    margin-left: 6px;
+}
+.card-like-bar svg{
+    display: inline-block;  
+
+}
+@media  screen and (max-width: 450px){
+    .movie-section{
+        left:0;
+        width: 100vw;
+      }
+      .card {
+        width: 90vw;
+        height: fit-content;
+        margin-left: 0;
+      }
+      .card-text{
+        margin-top: 5%;
+          padding: 4px;
+      }
+}

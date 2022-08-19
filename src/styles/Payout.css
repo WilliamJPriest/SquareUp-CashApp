@@ -1,0 +1,17 @@
+.payout-container{
+    position: absolute;
+    width:100vw;
+    height: 100vh;
+    z-index: 200;
+    background: #fff;
+}
+.payout-card{
+    width: 75vw;
+    height: 80vh;
+    margin-left: 12.5vw;
+    margin-top: 2vh;
+    border: 1px solid #000;
+    text-align: center;
+    background: #fff;
+    box-shadow: -2px 1px 15px grey;
+}
